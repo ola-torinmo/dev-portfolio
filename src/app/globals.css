@@ -14,8 +14,26 @@
   }
 }
 
+
+@font-face {
+  font-family: 'InterDisplay';
+  src: url('/src/components/font/InterDisplay-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PPNeueMontreal';
+  src: url('/src/components/font/ppneuemontreal-bold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* Apply fonts */
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'InterDisplay', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'PPNeueMontreal', sans-serif;
 }

@@ -27,7 +27,7 @@ const Carousel = (props) => {
     
     const animate = (currentTime) => {
       const elapsed = currentTime - startTime;
-      const speed = 0.05; // Much slower speed
+      const speed = 0.03; // Much slower speed
       const currentTranslate = -(elapsed * speed) % scrollWidth;
       
       if (container) {

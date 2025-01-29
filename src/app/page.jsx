@@ -11,12 +11,7 @@ import graphql from "../components/assets/graphql.png"
 import tailwind from "../components/assets/tailwind.png"
 import webflow from "../components/assets/webflow.png"
 import About from "../components/About"
-// import { FeaturesSection2 } from "@/components/features-section-2";
-// import { FeaturesSection3 } from "@/components/features-section-3";
-// import { Faq } from "@/components/faq";
-// import { Pricing } from "@/components/pricing";
-// import { CtaSection } from "@/components/cta-section";
-// import { Footer } from "@/components/footer";
+import './globals.css';
 
 export default function HomePage() {
   return (
@@ -32,16 +27,9 @@ export default function HomePage() {
       img6={graphql}
       img7={tailwind}
       img8={webflow}/>
-       <About/>
+      <About/>
       <Projects/>
      
-      {/* <FeaturesSection />
-      <FeaturesSection2 />
-      <FeaturesSection3 />
-      <Faq />
-      <Pricing />
-      <CtaSection />
-      <Footer /> */}
     </>
   );
 }
