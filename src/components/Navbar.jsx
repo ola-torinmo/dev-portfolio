@@ -13,7 +13,7 @@ const Navbar = () => {
         <div className="flex justify-around items-center h-16 my-6 backdrop-blur-md bg-white/70 border border-white/20 rounded-full shadow-lg">
           {/* Logo */}
           <div className="flex items-center">
-            <Image className="h-10 w-auto" src={Logo} alt="Seestem" />
+            <a href="/"><Image className="h-10 w-auto" src={Logo} alt="Seestem" /></a>
           </div>
 
           {/* Desktop Navigation */}

@@ -11,7 +11,11 @@ import graphql from "../components/assets/graphql.png"
 import tailwind from "../components/assets/tailwind.png"
 import webflow from "../components/assets/webflow.png"
 import About from "../components/About"
+import HowItWorks from "../components/HowItWorks";
+import Contact from "../components/Contact";
+import Footer from "../components/Footer";
 import './globals.css';
+
 
 export default function HomePage() {
   return (
@@ -29,6 +33,10 @@ export default function HomePage() {
       img8={webflow}/>
       <About/>
       <Projects/>
+      <HowItWorks/>
+      
+      <Contact/>
+      <Footer/>
      
     </>
   );
