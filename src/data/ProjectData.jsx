@@ -3,6 +3,14 @@ import projectImage1 from '../components/assets/Nexant.jpg';
 import projectImage2 from '../components/assets/ban.jpg';
 import projectImage3 from '../components/assets/axel0.jpg';
 import projectImage4 from '../components/assets/webflow2.jpg';
+import projectImage5 from '../components/assets/kold.png';
+import projectImage6 from '../components/assets/3D.png';
+import nomadbg from '../components/assets/nomadbg.jpg';
+import nexantbg from '../components/assets/nexantbg.jpg';
+import koldbg from '../components/assets/koldbg.jpg';
+import axelbg from '../components/assets/axelbg.jpg';
+import financebg from '../components/assets/financebg.jpg';
+import flowbg from '../components/assets/flowbg.jpg';
 
 // Log when the module is loaded
 console.log('ProjectData module loaded');
@@ -13,60 +21,102 @@ export const projects = [
     slug: "nexant-consult",
     title: "Nexant Consult",
     url: "https://nexantconsult.com/",
+    industry: "Construction",
     image: projectImage1,
-    projectType: "Web Development",
+    projectType: "Website",
     client: "Nexant Consult",
     year: "2023",
     description: "A professional consulting firm website built with modern web technologies.",
     technologies: ["React.js  ", "  Tailwind CSS"],
     details: "Complete web development solution for Nexant Consult.",
     challenge: "Creating a professional and responsive website that reflects the company's expertise.",
-    solution: "Implemented a modern tech stack with focus on performance and user experience."
+    solution: "Implemented a modern tech stack with focus on performance and user experience.",
+    abstractBg: nexantbg
   },
   {
     id: 2,
     slug: "bank-finance",
-    title: "Bank Finance",
+    title: "Hoo Bank",
     url: "https://bank-finance.vercel.app/",
+    industry: "Finance",
     image: projectImage2,
-    projectType: "Web Development",
+    projectType: "Website",
     client: "Bank Finance",
     year: "2023",
     description: "A modern banking and finance platform.",
     technologies: ["Next.js  ", "  Tailwind CSS"],
     details: "Modern banking platform development.",
     challenge: "Building a secure and user-friendly banking interface.",
-    solution: "Created an intuitive design with robust security features."
+    solution: "Created an intuitive design with robust security features.",
+    abstractBg: financebg
   },
   {
     id: 3,
+    slug: "kold-outreach",
+    title: "Kold Outreach",
+    url: "https://kold-outreach.vercel.app/",
+    industry: "Marketing",
+    image: projectImage5,
+    projectType: "Website",
+    client: "kold outreach",
+    year: "2023",
+    description: "A portfolio website showcasing cybersecurity expertise.",
+    technologies: ["React  ", "  Tailwind CSS"],
+    details: "Personal portfolio website development.",
+    challenge: "Creating a unique and engaging portfolio experience.",
+    solution: "Developed a clean, modern design with smooth animations.",
+    abstractBg: koldbg
+  },
+  {
+    id: 4,
+    slug: "self-improvement app",
+    title: "Flow State",
+    url: "",
+    industry: "Self Improvement",
+    image: projectImage6,
+    projectType: "Website",
+    client: "personal",
+    year: "2023",
+    description: "A portfolio website showcasing cybersecurity expertise.",
+    technologies: ["next.js  ", "  Tailwind CSS"],
+    details: "Personal portfolio website development.",
+    challenge: "Creating a unique and engaging portfolio experience.",
+    solution: "Developed a clean, modern design with smooth animations.",
+    abstractBg: flowbg
+  },
+  {
+    id: 5,
     slug: "axel-cyber-portfolio",
     title: "Axel Cyber Portfolio",
     url: "https://axel-cyber-portfolio.vercel.app/",
+    industry: "Digital Agency",
     image: projectImage3,
-    projectType: "Web Development",
+    projectType: "Website",
     client: "Axel Cyber",
     year: "2023",
     description: "A portfolio website showcasing cybersecurity expertise.",
     technologies: ["React  ", "  Tailwind CSS"],
     details: "Personal portfolio website development.",
     challenge: "Creating a unique and engaging portfolio experience.",
-    solution: "Developed a clean, modern design with smooth animations."
+    solution: "Developed a clean, modern design with smooth animations.",
+    abstractBg: axelbg
   },
   {
-    id: 4,
+    id: 6,
     slug: "nomad-digital-voyage",
     title: "Nomad Digital Voyage",
     url: "https://nomad-digital-voyage.webflow.io/",
+    industry: "Tourism",
     image: projectImage4,
-    projectType: "Web Development",
+    projectType: "Website",
     client: "Nomad Digital",
     year: "2023",
     description: "A digital agency website built with Webflow.",
     technologies: ["Webflow  ", "  Custom CSS"],
     details: "Digital agency website development.",
     challenge: "Building a highly customized Webflow website.",
-    solution: "Leveraged Webflow's capabilities with custom code integration."
+    solution: "Leveraged Webflow's capabilities with custom code integration.",
+    abstractBg: nomadbg
   }
 ];
 

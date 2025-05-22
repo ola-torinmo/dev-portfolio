@@ -1,94 +1,64 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
-import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react';
-import { MenuIcon, XIcon } from '@heroicons/react/outline';
 import Logo from "../components/assets/satori.png"
+import { ArrowUpRight, Download, Menu, X } from 'lucide-react';
 
 const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
+
     <div className="relative">
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-around items-center h-16 my-6 backdrop-blur-md bg-white/70 border border-white/20 rounded-full shadow-lg">
-          {/* Logo */}
-          <div className="flex items-center">
-            <a href="/"><Image className="h-10 w-auto" src={Logo} alt="Seestem" /></a>
+    {/* Navbar */}
+    <nav className="max-w-3xl mx-auto px-6 py-6">
+      {/* Desktop and Mobile Collapsed View */}
+      <div className="flex justify-between items-center py-3 px-6 bg-white rounded-xl border border-gray-100 shadow-sm">
+        {/* Logo */}
+           <div className="flex items-center">
+              <a href="/"><Image className="h-[50px] w-[120px]" src={Logo} alt="Seestem" /></a>
           </div>
-
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-6">
-            <a
-              href="/"
-              className="text-gray-700 hover:text-black transition-colors duration-200 font-medium text-sm"
-            >
-              Work
-            </a>
-            <a
-              href="/services"
-              className="text-gray-700 hover:text-black transition-colors duration-200 font-medium text-sm"
-            >
-              Services
-            </a>
-            <a
-              href="/pricing"
-              className="text-gray-700 hover:text-black transition-colors duration-200 font-medium text-sm"
-            >
-              Pricing
-            </a>
-            <a
-              href="/faqs"
-              className="text-gray-700 hover:text-black transition-colors duration-200 font-medium text-sm"
-            >
-              FAQs
-            </a>
-          </div>
-
-          {/* Mobile Menu Button */}
-          <div className="md:hidden">
-            <Disclosure>
-              {({ open }) => (
-                <>
-                  <DisclosureButton className="inline-flex items-center justify-center p-2 rounded-md text-gray-500 hover:bg-white/30 focus:outline-none transition-colors duration-200">
-                    {open ? (
-                      <XIcon className="h-6 w-6" aria-hidden="true" />
-                    ) : (
-                      <MenuIcon className="h-6 w-6" aria-hidden="true" />
-                    )}
-                  </DisclosureButton>
-                  <DisclosurePanel className="absolute top-16 left-0 right-0 backdrop-blur-md bg-white/70 border border-white/20 rounded-2xl shadow-lg py-4 mx-4">
-                    <div className="space-y-2 text-center">
-                      <a href="/" className="block text-gray-700 hover:text-black transition-colors duration-200 font-medium">
-                        Work
-                      </a>
-                      <a href="/services" className="block text-gray-700 hover:text-black transition-colors duration-200 font-medium">
-                        Services
-                      </a>
-                      <a href="/pricing" className="block text-gray-700 hover:text-black transition-colors duration-200 font-medium">
-                        Pricing
-                      </a>
-                      <a href="/faqs" className="block text-gray-700 hover:text-black transition-colors duration-200 font-medium">
-                        FAQs
-                      </a>
-                    </div>
-                  </DisclosurePanel>
-                </>
-              )}
-            </Disclosure>
-          </div>
-
-          {/* Call-to-Action Button */}
-          <div className="hidden md:block">
-            <a
-              href="/contact"
-              className="bg-black/80 hover:bg-black text-white px-6 py-2 rounded-full text-sm font-medium transition-colors duration-200 backdrop-blur-sm"
-            >
-              Have an Idea?
-            </a>
-          </div>
+        
+        {/* Desktop Navigation */}
+        <div className="hidden md:flex items-center space-x-6">
+          <a href="#about" className="text-gray-500 hover:text-gray-800 transition duration-200">
+            About
+          </a>
+          <a 
+            href="/resume.pdf" 
+            download="tolu_resume.pdf"
+            className="flex items-center justify-center px-5 py-2 text-[14px] border border-gray-300 text-gray-700 rounded-full hover:bg-gray-50 transition duration-200"
+          >
+            Download CV
+          </a>
         </div>
+        
+        {/* Mobile Menu Button */}
+        <button 
+          className="md:hidden text-green-600"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+        >
+          {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+        </button>
       </div>
-    </div>
+
+      {/* Mobile Menu Expanded */}
+      {isMenuOpen && (
+        <div className="md:hidden mt-4 py-6 px-6 bg-white rounded-2xl border border-gray-100 shadow-sm flex flex-col items-center space-y-6">
+          <a href="#about" className="text-gray-800 text-lg font-medium">
+            About
+          </a>
+          <a 
+            href="/resume.pdf" 
+            download="tolu_resume.pdf"
+            className="flex items-center justify-center px-5 py-2 text-[14px] border border-gray-300 text-gray-700 rounded-full hover:bg-gray-50 transition duration-200 w-48"
+          >
+            Download CV
+          </a>
+        </div>
+      )}
+    </nav>
+      </div>
   );
 };
 

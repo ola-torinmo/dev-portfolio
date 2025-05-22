@@ -7,7 +7,7 @@ import { use } from 'react';
 import React from 'react';
 import  Navbar from "../../../components/Navbar";
 import Footer from '../../../components/Footer';
-import Contact from '../../../components/Contact';
+
 
 export default function ProjectPage({ params }) {
   // Unwrap the params Promise
@@ -38,17 +38,17 @@ export default function ProjectPage({ params }) {
     <>
       <Navbar />
     <main className="max-w-7xl mx-auto px-4 py-8">
-      <h1 className="md:text-4xl text-2xl font-bold mb-3 ">{currentProject.title}</h1>
-      <p className="text-gray-600 mb-4">{currentProject.details || 'N/A'}</p>
+      <h1 className="md:text-4xl text-2xl font-bold mb-3 px-[5%] ">{currentProject.title}</h1>
+      
       
   
-      <div className="relative w-full aspect-video mb-12">
+      <div className="relative w- aspect-video mb-12 P-10">
         {currentProject.image ? (
           <Image
             src={currentProject.image}
             alt={currentProject.title || 'Project Image'}
             fill
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            // sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             style={{
               objectFit: "cover",
               objectPosition: "top"
@@ -63,8 +63,9 @@ export default function ProjectPage({ params }) {
         )}
       </div>
   
-      <div className="grid grid-cols-1 md:grid-cols-2 md:flex gap-8 mb-12 justify-stretch ">
+      <div className="grid grid-cols-1 md:grid-cols-2 md:flex gap-8 mb-12 justify-between px-[5%] ">
         <div className='col-span-2'>
+        <p className="text-gray-600 mb-4">{currentProject.details || 'N/A'}</p>
           <h2 className="font-semibold text-lg mb-2 ">DESCRIPTION</h2>
           
           <p className="text-xl text-gray-600 mb-8">{currentProject.description}</p>
@@ -100,7 +101,7 @@ export default function ProjectPage({ params }) {
         </div>
       )}
   
-      <section>
+      {/* <section>
         <h2 className="text-2xl font-bold mb-8">Other Projects</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {Array.isArray(otherProjects) && otherProjects.map((otherProject) => (
@@ -130,9 +131,8 @@ export default function ProjectPage({ params }) {
             </Link>
           ))}
         </div>
-      </section>
+      </section> */}
     </main>
-    <Contact/>
     <Footer/>
     </>
   );

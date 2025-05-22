@@ -36,7 +36,7 @@ const About = () => {
   ];
 
   return (
-    <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-16 pt-12 sm:pt-16 lg:pt-24 pb-16 sm:pb-24 lg:pb-32">
+    <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-16 py-24">
       {/* Header Section */}
       <div className="text-center mb-8 lg:mb-[-10%]">
         <h1 className="text-3xl sm:text-4xl font-bold mb-3">You Deserve to be Amazing</h1>

@@ -25,7 +25,13 @@
 @font-face {
   font-family: 'PPNeueMontreal';
   src: url('/src/components/font/ppneuemontreal-bold.otf') format('opentype');
-  font-weight: bold;
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'caveat';
+  src: url('/src/components/font/Caveat.ttf') format('truetype');
+  font-weight: normal;
   font-style: normal;
 }
 
@@ -34,6 +40,10 @@ body {
   font-family: 'InterDisplay', sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5 {
   font-family: 'PPNeueMontreal', sans-serif;
+}
+h6{
+  font-family: 'caveat', sans-serif;
+  
 }
