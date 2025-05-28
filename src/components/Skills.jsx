@@ -1,80 +1,7 @@
 'use client';
-// import React, { useEffect, useRef, useState } from 'react';
-// import Image from 'next/image';
-
-// const Carousel = (props) => {
-//   const containerRef = useRef(null);
-//   const [scrollWidth, setScrollWidth] = useState(0);
-//   const items = [
-//     { img: props.img1, label: 'React' },
-//     { img: props.img2, label: 'Next.js' },
-//     { img: props.img3, label: 'Bootstrap' },
-//     { img: props.img4, label: 'Git' },
-//     { img: props.img5, label: 'Github' },
-//     { img: props.img6, label: 'Graphql' },
-//     { img: props.img7, label: 'Tailwind' },
-//     { img: props.img8, label: 'Webflow' },
-//   ];
-
-//   useEffect(() => {
-//     if (!containerRef.current) return;
-//     const firstList = containerRef.current.querySelector('ul');
-//     setScrollWidth(firstList.scrollWidth);
-    
-//     const container = containerRef.current;
-//     let startTime = performance.now();
-//     let animationId;
-    
-//     const animate = (currentTime) => {
-//       const elapsed = currentTime - startTime;
-//       const speed = 0.03; 
-//       const currentTranslate = -(elapsed * speed) % scrollWidth;
-      
-//       if (container) {
-//         container.style.transform = `translateX(${currentTranslate}px)`;
-//       }
-      
-//       animationId = requestAnimationFrame(animate);
-//     };
-
-//     animationId = requestAnimationFrame(animate);
-
-//     return () => {
-//       if (animationId) {
-//         cancelAnimationFrame(animationId);
-//       }
-//     };
-//   }, [scrollWidth]);
-
-//   return (
-//     <div className="relative w-full overflow-hidden ">
-//       <div className="absolute top-0 left-0 w-48 h-full bg-gradient-to-r from-white via-white/80 to-transparent z-10 pointer-events-none" />
-//       <div className="absolute top-0 right-0 w-48 h-full bg-gradient-to-l from-white via-white/80 to-transparent z-10 pointer-events-none" />
-      
-//       <div className="flex will-change-transform" ref={containerRef}>
-//         {[...Array(4)].map((_, groupIndex) => (
-//           <ul key={groupIndex} className="flex items-center justify-start flex-none">
-//             {items.map((item, index) => (
-//               <li key={`${groupIndex}-${index}`} className="flex items-center mr-12">
-//                 <Image
-//                   src={item.img}
-//                   className="w-6 h-6 mt-0 mr-2"
-//                   alt={`Carousel Image ${index + 1}`}
-//                 />
-//                 <span>{item.label}</span>
-//               </li>
-//             ))}
-//           </ul>
-//         ))}
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Carousel;
 
 
-import { useState } from 'react';
+import { useState, useEffect} from 'react';
 import { Code, GitBranch, Layout, Layers, Palette, Figma, Command, Workflow } from 'lucide-react';
 import Image from 'next/image';
 import react from '../components/assets/react.svg';
@@ -85,9 +12,15 @@ import css from '../components/assets/css.svg';
 import bootstrap from '../components/assets/bootstrap.svg';
 import git from '../components/assets/git.svg'
 import figma from '../components/assets/figma.svg';
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 
 export default function Carousel() {
   const [hoveredCard, setHoveredCard] = useState(null);
+  
+   useEffect(()=>{
+      Aos.init({duration: 2000});
+    },[])
   
   const skillCategories = [
     {
@@ -216,7 +149,7 @@ export default function Carousel() {
         {/* Responsive card grid with uneven pattern on larger screens */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
       {/* Next.js Card - Full Width on all screens */}
-        <div className="col-span-1 md:col-span-2 lg:col-span-3 bg-white rounded-xl overflow-hidden shadow-md transition-all duration-300 hover:shadow-lg hover:transform hover:scale-[1.02]">
+        <div className="col-span-1 md:col-span-2 lg:col-span-3 bg-white rounded-xl overflow-hidden shadow-md transition-all duration-300 hover:shadow-lg hover:transform hover:scale-[1.02]" data-aos="fade-right">
           
           <div className="">
             <div className="p-6 md:p-8 flex flex-col md:flex-row items-start md:items-center relative z-10  ">
@@ -268,6 +201,7 @@ export default function Carousel() {
             className="col-span-1 bg-white rounded-xl overflow-hidden shadow-md transition-all duration-300 hover:shadow-lg hover:transform hover:scale-[1.02]"
             onMouseEnter={() => setHoveredCard('design-toolkit')}
             onMouseLeave={() => setHoveredCard(null)}
+            data-aos="fade-up"
           >
             <div className={`h-1 w-full bg-teal-500`}></div>
             <div className="p-6 h-full flex flex-col">
@@ -302,6 +236,7 @@ export default function Carousel() {
             className="col-span-1 bg-white rounded-xl overflow-hidden shadow-md transition-all duration-300 hover:shadow-lg hover:transform hover:scale-[1.02]"
             onMouseEnter={() => setHoveredCard('git-workflow')}
             onMouseLeave={() => setHoveredCard(null)}
+            data-aos="fade-up"
           >
             <div className={`h-1 w-full bg-orange-500`}></div>
             <div className="p-6 h-full flex flex-col">
@@ -332,6 +267,7 @@ export default function Carousel() {
             className="col-span-1 md:col-span-1 bg-white rounded-xl overflow-hidden shadow-md transition-all duration-300 hover:shadow-lg hover:transform hover:scale-[1.02]"
             onMouseEnter={() => setHoveredCard('figma-to-code')}
             onMouseLeave={() => setHoveredCard(null)}
+            data-aos="fade-up"
           >
             <div className={`h-1 w-full bg-purple-500`}></div>
             <div className="p-6 h-full flex flex-col">
@@ -362,6 +298,7 @@ export default function Carousel() {
             className="col-span-1 md:col-span-2 lg:col-span-3 bg-white rounded-xl overflow-hidden shadow-md transition-all duration-300 hover:shadow-lg hover:transform hover:scale-[1.02]"
             onMouseEnter={() => setHoveredCard('no-code')}
             onMouseLeave={() => setHoveredCard(null)}
+            data-aos="fade-left"
           >
             
             <div className={`h-1 w-full bg-blue-500`}></div>

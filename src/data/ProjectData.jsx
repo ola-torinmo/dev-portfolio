@@ -8,8 +8,10 @@ import projectImage6 from '../components/assets/3D.png';
 import nomadbg from '../components/assets/nomadbg.jpg';
 import nexantbg from '../components/assets/nexantbg.jpg';
 import koldbg from '../components/assets/koldbg.jpg';
+import koldbg2 from '../components/assets/koldbg2.jpg';
 import axelbg from '../components/assets/axelbg.jpg';
 import financebg from '../components/assets/financebg.jpg';
+import financebg2 from '../components/assets/financebg2.jpg';
 import flowbg from '../components/assets/flowbg.jpg';
 
 // Log when the module is loaded
@@ -26,8 +28,8 @@ export const projects = [
     projectType: "Website",
     client: "Nexant Consult",
     year: "2023",
-    description: "A professional consulting firm website built with modern web technologies.",
-    technologies: ["React.js  ", "  Tailwind CSS"],
+    description: "A digital solution for Nexant Consulting - a Global infrastructure consulting firm specializing in complex engineering projects with 40+ years of combined leadership experience.",
+    technologies: ["React.js, ", "  Tailwind CSS"],
     details: "Complete web development solution for Nexant Consult.",
     challenge: "Creating a professional and responsive website that reflects the company's expertise.",
     solution: "Implemented a modern tech stack with focus on performance and user experience.",
@@ -43,8 +45,8 @@ export const projects = [
     projectType: "Website",
     client: "Bank Finance",
     year: "2023",
-    description: "A modern banking and finance platform.",
-    technologies: ["Next.js  ", "  Tailwind CSS"],
+    description: "Hoo Bank - Next-generation fintech platform offering intelligent payment solutions and credit card matching services through expert analysis of rates, fees, and personalized financial needs.",
+    technologies: ["Next.js, ", "  Tailwind CSS"],
     details: "Modern banking platform development.",
     challenge: "Building a secure and user-friendly banking interface.",
     solution: "Created an intuitive design with robust security features.",
@@ -60,25 +62,25 @@ export const projects = [
     projectType: "Website",
     client: "kold outreach",
     year: "2023",
-    description: "A portfolio website showcasing cybersecurity expertise.",
-    technologies: ["React  ", "  Tailwind CSS"],
+    description: "KoldOutreach - B2B LinkedIn marketing platform that transforms LinkedIn into a primary sales channel through advanced personalization, authority building, and consistent lead generation.",
+    technologies: ["Next.js,", "  Tailwind CSS"],
     details: "Personal portfolio website development.",
     challenge: "Creating a unique and engaging portfolio experience.",
     solution: "Developed a clean, modern design with smooth animations.",
-    abstractBg: koldbg
+    abstractBg: koldbg2
   },
   {
     id: 4,
     slug: "self-improvement app",
     title: "Flow State",
-    url: "",
+    url: "https://my-flow-state-app.vercel.app/",
     industry: "Self Improvement",
     image: projectImage6,
     projectType: "Website",
     client: "personal",
     year: "2023",
-    description: "A portfolio website showcasing cybersecurity expertise.",
-    technologies: ["next.js  ", "  Tailwind CSS"],
+    description: "Flow State - Goal-tracking mobile app landing page designed to monitor progress, boost motivation, and celebrate achievements for enhanced productivity and personal accomplishment.",
+    technologies: ["Next.js,  ", "  Tailwind CSS, ", "  Framer Motion"],
     details: "Personal portfolio website development.",
     challenge: "Creating a unique and engaging portfolio experience.",
     solution: "Developed a clean, modern design with smooth animations.",
@@ -94,8 +96,8 @@ export const projects = [
     projectType: "Website",
     client: "Axel Cyber",
     year: "2023",
-    description: "A portfolio website showcasing cybersecurity expertise.",
-    technologies: ["React  ", "  Tailwind CSS"],
+    description: "Axel Cyber - Web design agency specializing in high-converting websites for enterprise clients across real estate, healthcare, construction, digital agencies, and SaaS platforms.",
+    technologies: ["React, ", "  Tailwind CSS"],
     details: "Personal portfolio website development.",
     challenge: "Creating a unique and engaging portfolio experience.",
     solution: "Developed a clean, modern design with smooth animations.",
@@ -111,8 +113,8 @@ export const projects = [
     projectType: "Website",
     client: "Nomad Digital",
     year: "2023",
-    description: "A digital agency website built with Webflow.",
-    technologies: ["Webflow  ", "  Custom CSS"],
+    description: "Nomad Digital Voyage - Travel platform that curates personalized destination experiences, guiding wanderlust seekers from sun-kissed beaches to misty mountaintops with expertly crafted dream itineraries.",
+    technologies: ["Webflow, ", "  Custom CSS"],
     details: "Digital agency website development.",
     challenge: "Building a highly customized Webflow website.",
     solution: "Leveraged Webflow's capabilities with custom code integration.",

@@ -21,9 +21,9 @@ const Navbar = () => {
         
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-6">
-          <a href="#about" className="text-gray-500 hover:text-gray-800 transition duration-200">
+          {/* <a href="#about" className="text-gray-500 hover:text-gray-800 transition duration-200">
             About
-          </a>
+          </a> */}
           <a 
             href="/resume.pdf" 
             download="tolu_resume.pdf"
@@ -45,9 +45,7 @@ const Navbar = () => {
       {/* Mobile Menu Expanded */}
       {isMenuOpen && (
         <div className="md:hidden mt-4 py-6 px-6 bg-white rounded-2xl border border-gray-100 shadow-sm flex flex-col items-center space-y-6">
-          <a href="#about" className="text-gray-800 text-lg font-medium">
-            About
-          </a>
+        
           <a 
             href="/resume.pdf" 
             download="tolu_resume.pdf"

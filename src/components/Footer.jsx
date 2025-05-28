@@ -21,7 +21,7 @@ export default function Footer() {
           <div className="text-center">
             <p className="text-xl text-gray-500 mb-1">LinkedIn</p>
             <a 
-              href="https://linkedin.com/in/tolushaola" 
+              href="https://www.linkedin.com/in/olaoluwa-adebayo28/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="flex items-center justify-center text-xl font-medium hover:text-gray-600 transition duration-200"
@@ -34,7 +34,7 @@ export default function Footer() {
           <div className="text-center">
             <p className="text-xl text-gray-500 mb-1">X</p>
             <a 
-              href="https://x.com/Shaola_" 
+              href="https://x.com/28Satori__" 
               target="_blank" 
               rel="noopener noreferrer"
               className="flex items-center justify-center text-xl font-medium hover:text-gray-600 transition duration-200"
