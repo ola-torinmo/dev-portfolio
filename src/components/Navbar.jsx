@@ -21,12 +21,9 @@ const Navbar = () => {
         
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-6">
-          {/* <a href="#about" className="text-gray-500 hover:text-gray-800 transition duration-200">
-            About
-          </a> */}
           <a 
-            href="/resume.pdf" 
-            download="tolu_resume.pdf"
+            href="/torinmo.dev.pdf" 
+            download="torinmo.dev.pdf"
             className="flex items-center justify-center px-5 py-2 text-[14px] border border-gray-300 text-gray-700 rounded-full hover:bg-gray-50 transition duration-200"
           >
             Download CV
@@ -47,8 +44,8 @@ const Navbar = () => {
         <div className="md:hidden mt-4 py-6 px-6 bg-white rounded-2xl border border-gray-100 shadow-sm flex flex-col items-center space-y-6">
         
           <a 
-            href="/resume.pdf" 
-            download="tolu_resume.pdf"
+            href="/assets/torinmo.dev.pdf" 
+            download="torinmo.dev.pdf"
             className="flex items-center justify-center px-5 py-2 text-[14px] border border-gray-300 text-gray-700 rounded-full hover:bg-gray-50 transition duration-200 w-48"
           >
             Download CV
