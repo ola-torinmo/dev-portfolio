@@ -37,8 +37,8 @@ const Hero = () => {
             <div className="mb-4 sm:mb-6 text-center md:text-left">
               <p className="text-gray-800 text-lg sm:text-xl mb-2">Hey there 👋,</p>
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 leading-tight">
-                I convert complex problems
-                <br className="hidden sm:block" /> 
+                I convert complex problems  
+                <br className="" /> 
                  into elegant <span className="text-gray-600">digital solutions</span>
               </h1>
             </div>

@@ -31,7 +31,7 @@ const ProjectCard = ({ project }) => {
       Aos.init({duration: 2000});
     },[])
   return (
-    <div className="bg-gray-50 rounded-3xl p-8 mb-12" data-aos="fade-right">
+    <div className="bg-gray-50 rounded-3xl p-8 mb-12" data-aos="fade-down">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
         {/* Left side - Content */}
         <div className="space-y-4">
@@ -92,11 +92,11 @@ const ProjectCard = ({ project }) => {
                   <Image
                     src={project.image}
                     alt={`${project.title} website screenshot`}
-                    className="transition-transform duration-300 hover:scale-105"
+                    className="transition-transform duration-300 hover:scale-105 md:object-cover "
                     fill
                     sizes="(max-width: 768px) 100vw, 50vw"
                     style={{
-                      objectFit: "cover",
+                      
                       objectPosition: "top"
                     }}
                     quality={90}

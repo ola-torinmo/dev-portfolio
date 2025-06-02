@@ -1,7 +1,7 @@
 'use client';
 
 
-import { useState, useEffect} from 'react';
+import { useState} from 'react';
 import { Code, GitBranch, Layout, Layers, Palette, Figma, Command, Workflow } from 'lucide-react';
 import Image from 'next/image';
 import react from '../components/assets/react.svg';
@@ -16,11 +16,11 @@ import Aos from 'aos'
 import 'aos/dist/aos.css'
 
 export default function Carousel() {
-  const [hoveredCard, setHoveredCard] = useState(null);
+  // const [hoveredCard, setHoveredCard] = useState(null);
   
-   useEffect(()=>{
-      Aos.init({duration: 2000});
-    },[])
+  //  useEffect(()=>{
+  //     Aos.init({duration: 2000});
+  //   },[])
   
   const skillCategories = [
     {
@@ -149,8 +149,8 @@ export default function Carousel() {
         {/* Responsive card grid with uneven pattern on larger screens */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
       {/* Next.js Card - Full Width on all screens */}
-        <div className="col-span-1 md:col-span-2 lg:col-span-3 bg-white rounded-xl overflow-hidden shadow-md transition-all duration-300 hover:shadow-lg hover:transform hover:scale-[1.02]" data-aos="fade-right">
-          
+        <div className="col-span-1 md:col-span-2 lg:col-span-3 bg-white rounded-xl overflow-hidden shadow-md transition-all duration-300 hover:shadow-lg hover:transform hover:scale-[1.02]" >
+           
           <div className="">
             <div className="p-6 md:p-8 flex flex-col md:flex-row items-start md:items-center relative z-10  ">
               <div className="md:w-2/3 mb-6 md:mb-0 md:pr-6">
@@ -201,7 +201,7 @@ export default function Carousel() {
             className="col-span-1 bg-white rounded-xl overflow-hidden shadow-md transition-all duration-300 hover:shadow-lg hover:transform hover:scale-[1.02]"
             onMouseEnter={() => setHoveredCard('design-toolkit')}
             onMouseLeave={() => setHoveredCard(null)}
-            data-aos="fade-up"
+           
           >
             <div className={`h-1 w-full bg-teal-500`}></div>
             <div className="p-6 h-full flex flex-col">
@@ -236,7 +236,7 @@ export default function Carousel() {
             className="col-span-1 bg-white rounded-xl overflow-hidden shadow-md transition-all duration-300 hover:shadow-lg hover:transform hover:scale-[1.02]"
             onMouseEnter={() => setHoveredCard('git-workflow')}
             onMouseLeave={() => setHoveredCard(null)}
-            data-aos="fade-up"
+            
           >
             <div className={`h-1 w-full bg-orange-500`}></div>
             <div className="p-6 h-full flex flex-col">
@@ -267,7 +267,7 @@ export default function Carousel() {
             className="col-span-1 md:col-span-1 bg-white rounded-xl overflow-hidden shadow-md transition-all duration-300 hover:shadow-lg hover:transform hover:scale-[1.02]"
             onMouseEnter={() => setHoveredCard('figma-to-code')}
             onMouseLeave={() => setHoveredCard(null)}
-            data-aos="fade-up"
+            
           >
             <div className={`h-1 w-full bg-purple-500`}></div>
             <div className="p-6 h-full flex flex-col">
@@ -298,7 +298,7 @@ export default function Carousel() {
             className="col-span-1 md:col-span-2 lg:col-span-3 bg-white rounded-xl overflow-hidden shadow-md transition-all duration-300 hover:shadow-lg hover:transform hover:scale-[1.02]"
             onMouseEnter={() => setHoveredCard('no-code')}
             onMouseLeave={() => setHoveredCard(null)}
-            data-aos="fade-left"
+            
           >
             
             <div className={`h-1 w-full bg-blue-500`}></div>
